@@ -1,8 +1,8 @@
 import Projects from '../components/Projects'
 import Hero from '../components/Hero'
 import WorkExperience from '../components/WorkExperience'
-import About from './About'
 import Education from '../components/Education'
+import About from './About'
 export default function Landing() {
   return (
     <section className="bg-white dark:bg-gray-900">
@@ -10,6 +10,9 @@ export default function Landing() {
       <WorkExperience />
       <Projects />
       <Education />
+      <About>
+
+      </About>
     </section>
   )
 }

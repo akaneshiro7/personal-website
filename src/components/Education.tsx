@@ -18,7 +18,7 @@ export default function Education() {
                 <div className='font-bold'> Bachelor's Degree in Computer Engineering, May 2025 </div>
                 <div> <span className='font-bold'>Minors:</span> Math, Computer Science </div>
                 <div><span className='font-bold'> GPA:</span> 3.91 </div>
-                <div><span className='font-bold'>Awards:</span> Dean of Engineering Merit Scholarship, Deans List</div>
+                <div><span className='font-bold'>Awards:</span> Dean of Engineering Merit Scholarship, Dean's List</div>
             </div>
         </div>
         <div> 

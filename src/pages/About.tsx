@@ -28,7 +28,7 @@ export default function About() {
                 I am currently working as a System Engineering Intern at Leidos in Bethesda, Maryland, where I am developing software for Submarine Training Systems.
                 My main projects have been focused on developing Web and Desktop Applications for Audio Distribution Networks. 
                 This includes developing RESTful APIs using Express, designing User Interfaces with React and TailwindCSS, building and packaging
-                Desktop Applications with Electron, desiging database schemas in MariaDB and SQL, real-time communication with WebSockets, and more.
+                Desktop Applications with Electron, designing database schemas in MariaDB and SQL, real-time communication with WebSockets, and more.
               </p>
               <p className='my-2'>
                 Outside of work, I have been interested in Machine Learning and Natural Language Processing. 
@@ -40,7 +40,7 @@ export default function About() {
                 <a target="_blank" href='mailto:aidankaneshiro@gmail.com' className='text-center rounded py-2 px-4 bg-yellow-600 hover:bg-yellow-500'>Contact</a>
                 <a target="_blank" href='https://github.com/akaneshiro7' className='text-center rounded py-2 px-4 bg-gray-600 hover:bg-gray-500'>Github</a>
                 <a target="_blank" href='https://www.linkedin.com/in/aidan-kaneshiro/' className='text-center rounded py-2 px-4 bg-blue-500 hover:bg-blue-400'>Linkedin</a>
-                <a target="_blank" href='' className='text-center rounded py-2 px-4 bg-indigo-500 hover:bg-indigo-400'>Resume</a>
+                <a target="_blank" href='resume.pdf' className='text-center rounded py-2 px-4 bg-indigo-500 hover:bg-indigo-400'>Resume</a>
 
               </div>
             </div>

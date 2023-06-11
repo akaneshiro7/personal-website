@@ -3,10 +3,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Work', href: '/', current: true },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Contact', href: 'mailto:aidankaneshiro@gmail.com', current: false },
-  { name: 'Resume', href:'', current:false}
+  { name: 'Work', href: '/portfolio', current: true, newPage:false},
+  // { name: 'About', href: '/about', current: false },
+  { name: 'Contact', href: 'mailto:aidankaneshiro@gmail.com', current: false, newPage:false},
+  { name: 'Resume', href:'resume.pdf', current:false, newPage:true}
 ]
 
 function classNames(...classes) {
@@ -45,12 +45,13 @@ export default function Example() {
                           'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
+                        target={item.newPage ? "_blank":"_self"}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
                       </a>
                     ))}
-                     
+
                   </div>
                 </div>
               </div>
@@ -70,6 +71,8 @@ export default function Example() {
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
+                  target={item.newPage ? "_blank":"_self"}
+
                 >
                   {item.name}
                 </Disclosure.Button>

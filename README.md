@@ -2,6 +2,7 @@
 
 Welcome to my portfolio website's source code! This website has been built using [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Vite](https://vitejs.dev/) and [TypeScript](https://www.typescriptlang.org/). It displays my projects, resume, work experience, and other relevant information that I'd like to share with potential employers or collaborators.
 
+![](https://github.com/akaneshiro7/portfolio/blob/master/portfolio.png)
 ## Live Version
 
 You can view the live version of the portfolio website at [https://akaneshiro7.github.io/portfolio/](https://akaneshiro7.github.io/portfolio/).

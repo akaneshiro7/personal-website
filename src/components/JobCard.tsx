@@ -20,6 +20,16 @@ interface JobProps {
     handleOpen: any
   }
 
+export interface JobCardProps {
+    location: string;
+    jobDescription: string;
+    jobTitle: string;
+    company: string;
+    skills: string[];
+    date: string;
+    shortDate: string;
+    link:string;
+}
 export default function JobCard({location, jobDescription, jobTitle, company, skills, date, shortDate, link, index, open, handleOpen}: JobProps) {
  
   
@@ -40,7 +50,7 @@ export default function JobCard({location, jobDescription, jobTitle, company, sk
                             <time className="hidden md:block"> {date} </time>
                         </div>
 
-                    <Icon id={1} open={open} />
+                    <Icon id={index} open={open} />
                     </div>
                 </div>
                 </AccordionHeader>

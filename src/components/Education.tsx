@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Education() {
-    const courses =  ["Embedded Design: Enabling Robotics", 'Computing Fundamentals', 'Fundamentals of Networks', 'Differential Equations and Linear Algebra', 'Calculus 3','Discrete Structures', 'Probability and Statistics', 'Physics 2']
-    const inProgress = ["Machine Learning and Pattern Recognition", "Engineering Algorithms", "Circuits and Signals", "Digital Design and Computer Organization"]
+export type EducationProps = {
+    courses: string[],
+    inProgress: string[]
+}
+export default function Education({courses, inProgress}: EducationProps) {
 
     return (
    <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 text-white">

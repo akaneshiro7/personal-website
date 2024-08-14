@@ -2,19 +2,28 @@ import { Tooltip } from '@material-tailwind/react'
 import Timeline from './WorkExperience'
 import Carousel from './Carousel'
 
-export default function Hero() {
+export type HeroProps = {
+    name: string,
+    jobTitle: string,
+    lookingFor: string,
+    currently: string,
+    previous: string,
+    studying?: boolean,
+}
+
+export default function Hero({name, jobTitle, lookingFor, currently, previous, studying}: HeroProps) {
   return (
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div className="mr-auto place-self-center lg:col-span-7">
                 <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-                    <div>Aidan Kaneshiro,</div> 
-                    <div>Software Engineer</div>
+                    <div>{name},</div> 
+                    <div>{jobTitle}</div>
                 </h1>
                 <div className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
 
-                    <p> Looking for <span className='font-semibold '>Winter/Summer 2024 Coops/Internships</span> </p>
-                    <p> Currently studying <a href="https://www.northeastern.edu/" target="_blank" className='font-semibold hover:text-yellow-600'>Computer Engineering at Northeastern University - 3.9 GPA </a></p>
-                    <p> Previously worked at <a className='font-semibold hover:text-indigo-600' href="https://www.leidos.com/" target="_blank"> Leidos - System Engineer</a> </p>
+                    <p> Looking for <span className='font-semibold '>{lookingFor}</span> </p>
+                    <p> Currently {studying ? 'studying': 'working'} <a href="https://www.northeastern.edu/" target="_blank" className='font-semibold hover:text-yellow-600'>{currently}</a></p>
+                    {previous && <p> Previously worked at <a className='font-semibold hover:text-indigo-600' href="https://www.leidos.com/" target="_blank"> {previous}</a> </p>}
 
                 </div>
     
@@ -85,6 +94,7 @@ export default function Hero() {
                     </Tooltip>
                         
                 </div>
+                
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                 {/* <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup" /> */}

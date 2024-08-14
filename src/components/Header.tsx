@@ -1,12 +1,11 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Work', href: '/portfolio', current: true, newPage:false},
+  { name: 'WORK', href: '/portfolio', current: true, newPage:false},
   // { name: 'About', href: '/about', current: false },
-  { name: 'Contact', href: 'mailto:aidankaneshiro@gmail.com', current: false, newPage:false},
-  { name: 'Resume', href:'resume.pdf', current:false, newPage:true}
+  { name: 'CONTACT', href: 'mailto:aidankaneshiro@gmail.com', current: false, newPage:false},
+  { name: 'RESUME', href:'resume.pdf', current:false, newPage:true}
 ]
 
 function classNames(...classes) {

@@ -1,13 +1,18 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
 
-export default function About() {
+export type AboutProps = {
+  skills: string[],
+  interests: string[],
+  hobbies: string[],
+  paragraphs: string[],
+  email: string,
+  github: string,
+  linkedin: string,
+  resume: string,
+}
 
-  const skills=['TypeScript', 'JavaScript','Python', 'C++', 'React', 'Express','Electron', 'TailwindCSS', 'MariaDB', 'REST API', 'SQL', 'Web Development']
-  const improving=['Machine Learning', 'Natural Language Processing', 'HuggingFace', 'Pandas', 'FastAI', 'PyTorch']
-  
-  const hobbies=["Surfing", "Volleyball (HS Varsity Captain)", "Basketball (Traveled to Japan to Play)", "Hiking", "National Parks (19 out of 64)", "Traveling",]
-  
+export default function About({skills, interests, hobbies, paragraphs, email, github, linkedin, resume}: AboutProps) {
   return (
     <section className="bg-white dark:bg-gray-900 text-white">
       <div className='max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 '>
@@ -21,26 +26,14 @@ export default function About() {
               <div>Nice to Meet you!</div> 
             </h1>
             <div className='text-white'>
-              <p className='my-2'>
-              I am Aidan Kaneshiro, a Computer Engineering student at Northeastern University, pursuing minors in Computer Science in Math.
-              </p>
-              <p className='my-2'>
-                I am currently working as a System Engineering Intern at Leidos in Bethesda, Maryland, where I am developing software for Submarine Training Systems.
-                My main projects have been focused on developing Web and Desktop Applications for Audio Distribution Networks. 
-                This includes developing RESTful APIs using Express, designing User Interfaces with React and TailwindCSS, building and packaging
-                Desktop Applications with Electron, designing database schemas in MariaDB and SQL, real-time communication with WebSockets, and more.
-              </p>
-              <p className='my-2'>
-                Outside of work, I have been interested in Machine Learning and Natural Language Processing. 
-                I have begun investigating these topics with FastAI, Pytorch, and Hugging Face.
-                To practice, I developed a Machine Learning model to detect Parasitized Malaria Cell with 98.6% Accuracy!
-                In addition, I am working on classifying stock-related news data with Hugging Face Transformers and analyzing its effect on traded equities.
-              </p>
+              {paragraphs.map(p => (
+                <p className='my-2'> {p} </p>
+              ))}
               <div className='grid grid-cols-4 font-extrabold gap-x-2 text-gray-100'>
-                <a target="_blank" href='mailto:aidankaneshiro@gmail.com' className='text-center rounded py-2 px-4 bg-yellow-600 hover:bg-yellow-500'>Contact</a>
-                <a target="_blank" href='https://github.com/akaneshiro7' className='text-center rounded py-2 px-4 bg-gray-600 hover:bg-gray-500'>Github</a>
-                <a target="_blank" href='https://www.linkedin.com/in/aidan-kaneshiro/' className='text-center rounded py-2 px-4 bg-blue-500 hover:bg-blue-400'>Linkedin</a>
-                <a target="_blank" href='resume.pdf' className='text-center rounded py-2 px-4 bg-indigo-500 hover:bg-indigo-400'>Resume</a>
+                <a target="_blank" href={`mailto:${email}`} className='text-center rounded py-2 bg-yellow-600 hover:bg-yellow-500'>Contact</a>
+                <a target="_blank" href={github} className='text-center rounded py-2 bg-gray-600 hover:bg-gray-500'>Github</a>
+                <a target="_blank" href={linkedin} className='text-center rounded py-2  bg-blue-500 hover:bg-blue-400'>Linkedin</a>
+                <a target="_blank" href={resume} className='text-center rounded py-2 bg-indigo-500 hover:bg-indigo-400'>Resume</a>
 
               </div>
             </div>
@@ -56,10 +49,10 @@ export default function About() {
               ))}
             </ul>
 
-            <h1 className='text-2xl font-bold mt-8 mb-4'>Improving</h1>
+            <h1 className='text-2xl font-bold mt-8 mb-4'>Developing</h1>
             <ul className='flex gap-2 flex-wrap'>
 
-              {improving.map(skill => (
+              {interests.map(skill => (
                 <li className='font-semibold py-2 px-4 bg-gray-800 rounded-lg hover:bg-gray-800 hover:text-yellow-600'> {skill}</li>
               ))}
             </ul>

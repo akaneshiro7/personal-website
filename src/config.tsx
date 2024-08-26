@@ -5,44 +5,64 @@ import { ProjectProps } from "./components/ProjectCard";
 import { AboutProps } from "./pages/About";
 const hero: HeroProps = {
     name: 'Aidan Kaneshiro',
-    jobTitle: 'Quantative Strat at Morgan Stanley',
+    jobTitle: 'Quantative Strat',
     lookingFor: 'New-Grad 2025 Roles',
-    currently: 'string',
+    currently: 'Morgan Stanley',
     previous: 'UBS and Leidos',
     studying: false,
 }
 
 const workExperience: JobCardProps[] = [
     {            
+        location:"NYC, New York",
+        jobDescription : "Developed A Full-Stack Application to Dynamically Generate Time-Series Reports",
+        jobTitle : "Quantiative Finance Summer Analyst",
+        company : "Morgan Stanley",
+        skills : ["Python", 'TypeScript', 'q/kdb+', 'React'],
+        date:"June 2024 - August 2024",
+        shortDate:"Jun 2024 - Aug 2024",
+        link:"https://www.morganstanley.com/"
+    },
+    {            
+        location:"NYC, New York",
+        jobDescription : "Implemented Statistical Models and Automated Processes for Emerging Market Debt Team",
+        jobTitle : "Fixed Income Strategist",
+        company : "UBS",
+        skills : ["Python", "SQL", "Bash", 'Machine Learning', 'Time-Series Analysis'],
+        date:"January 2024 - June 2024",
+        shortDate:"Jan 2024 - Jun 2024",
+        link:"https://www.ubs.com/"
+    },
+    {            
         location:"Bethesda, Maryland",
-        jobDescription : "Developing Full Stack Web Apps, Desktop Apps, and Backend Applications for Submarine Training Systems",
+        jobDescription : "Developed Full Stack Web Apps, Desktop Apps, and Backend Applications for Submarine Training Systems",
         jobTitle : "System Engineer Coop",
         company : "Leidos",
         skills : ["Javascript", "Python", "React", "Express", "SQL", "MariaDB", "Bash", "Electron", "Websockets"],
-        date:"January 2023 - Present",
-        shortDate:"Jan 2023 - Present",
+        date:"January 2023 - December 2023",
+        shortDate:"Jan 2023 - Dec 2023",
         link:"https://www.leidos.com/"
     },
     {
         location:"Boston, Massachusetts", 
-        jobDescription : "Leveraging Cloud Computing to benchmark and quantify resource consumption and carbon emissions of Large Language Models and High Performance Computing Systems",
+        jobDescription : "Leveraged Cloud Computing to benchmark and quantify resource consumption and carbon emissions of Large Language Models and High Performance Computing Systems",
         jobTitle : "HPC Research Assistant",
         company : "Goodwill Computing Laboratory",
         skills : ["Python", "AWS EC2", "Machine Learning", "Large Language Models"],
-        date:"September 2023 - Present",
-        shortDate:"Sept 2023 - Present",
+        date:"September 2023 - December 2023",
+        shortDate:"Sept 2023 - Dec 2023",
         link:"https://goodwillcomputinglab.github.io/",
     },
-    {
-        location:"Boston, Massachusetts",
-        jobDescription : "Full-Stack Web Development for a gamified, financial-literacy Web Application",
-        jobTitle : "Full-Stack Software Engineer",
-        company : "Generate",
-        skills : ["Next.js", "PostgreSQL", "React", "Prisma", "TailwindCSS"],
-        date:"September 2023 - Present",
-        shortDate:"Sept 2023 - Present",
-        link:"https://generatenu.com/",
-    }
+    // {
+    //     location:"Boston, Massachusetts",
+    //     jobDescription : "Full-Stack Web Development for a gamified, financial-literacy Web Application",
+    //     jobTitle : "Full-Stack Software Engineer",
+    //     company : "Generate",
+    //     skills : ["Next.js", "PostgreSQL", "React", "Prisma", "TailwindCSS"],
+    //     date:"September 2023 - Present",
+    //     shortDate:"Sept 2023 - Present",
+    //     link:"https://generatenu.com/",
+    // }
 
 ]
 
@@ -93,17 +113,18 @@ const projects: ProjectProps[] = [
     }
 ]
 const education: EducationProps = {
-    courses : ["Embedded Design: Enabling Robotics", 'Computing Fundamentals', 'Fundamentals of Networks', 'Differential Equations and Linear Algebra', 'Calculus 3','Discrete Structures', 'Probability and Statistics', 'Physics 2'],
-    inProgress : ["Machine Learning and Pattern Recognition", "Engineering Algorithms", "Research - High Performance Computing", "Digital Design and Computer Organization"]
+    courses : ["Machine Learning and Pattern Recognition", "Engineering Algorithms", "Research - High Performance Computing", "Digital Design and Computer Organization", "Embedded Design: Enabling Robotics", 'Computing Fundamentals', 'Fundamentals of Networks', 'Differential Equations and Linear Algebra', 'Calculus 3','Discrete Structures', 'Probability and Statistics', 'Physics 2'],
+    inProgress : ["Machine Learning and Stastical Learning 2", "Capstone", "Database Design", "Circuits and Signals"]
 }
 
-const skills=['TypeScript', 'JavaScript','Python', 'C++', 'React', 'Express','Electron', 'Bash','TailwindCSS', 'MariaDB', 'REST API', 'SQL', 'Web Development']
+const skills=['TypeScript', 'JavaScript','Python', 'C++', 'React', 'Express','Electron', 'Bash','TailwindCSS', 'MariaDB', 'REST API', 'SQL', 'Web Development', 'q/kdb+']
 const interests=['Machine Learning', 'Natural Language Processing', 'HuggingFace', 'Pandas', 'FastAI', 'PyTorch']
-const hobbies=["Surfing", "Volleyball (HS Varsity Captain)", "Basketball (Traveled to Japan to Play)", "Hiking", "National Parks (19 out of 63)", "Traveling",]
+const hobbies=["Surfing", "Volleyball (HS Varsity Captain)", "Basketball (Traveled to Japan to Play)", "Hiking", "National Parks (20 out of 63)", "Traveling",]
 
 const paragraphs = [
     'I am Aidan Kaneshiro, a Computer Engineering student at Northeastern University, pursuing minors in Computer Science and Math.',
-    'I am currently working as a System Engineering Intern at Leidos in Bethesda, Maryland, where I am developing software for Submarine Training Systems. My main projects have been focused on developing Web and Desktop Applications for Audio Distribution Networks. This includes developing RESTful APIs using Express, designing User Interfaces with React and TailwindCSS, building and packaging Desktop Applications with Electron, designing database schemas in MariaDB and SQL, real-time communication with WebSockets, and more.',
+    'Previously, I have worked as a Quantitative Summer Analyst at Morgan Stanley, a Fixed-Income Strategist at UBS, and a System Engineer at Leidos. At MS, I developed a Full-Stack Application to dynamically generate websites and time-series reports based off a yaml file. At UBS, I implemented stastical models in Python and built out automated processes for webscraping and updating databases. At Leidos, I developed Full Stack Web-Apps and Desktop Apps to manage Audio Distribution Networks among Submarine Training Systems. Through these experiences, I have gained significant expertise in Machine Learning and Full-Stack Development.',
+    
     'Outside of work, I have been interested in Machine Learning and Natural Language Processing. I have begun investigating these topics with FastAI, Pytorch, and Hugging Face. To practice, I developed a Machine Learning model to detect Parasitized Malaria Cell with 98.6% Accuracy! In addition, I am working on classifying stock-related news data with Hugging Face Transformers and analyzing its effect on traded equities.'
 ]
 const email = 'aidankaneshiro@gmail.com'

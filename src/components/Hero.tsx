@@ -22,8 +22,8 @@ export default function Hero({name, jobTitle, lookingFor, currently, previous, s
                 <div className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
 
                     <p> Looking for <span className='font-semibold '>{lookingFor}</span> </p>
-                    <p> Currently {studying ? 'studying': 'working'} <a href="https://www.northeastern.edu/" target="_blank" className='font-semibold hover:text-yellow-600'>{currently}</a></p>
-                    {previous && <p> Previously worked at <a className='font-semibold hover:text-indigo-600' href="https://www.leidos.com/" target="_blank"> {previous}</a> </p>}
+                    <p> Currently {studying ? 'studying': 'working'} <a target="_blank" className='font-semibold hover:text-yellow-600'>{currently}</a></p>
+                    {previous && <p> Previously worked at <a className='font-semibold hover:text-indigo-600' target="_blank"> {previous}</a> </p>}
 
                 </div>
     
